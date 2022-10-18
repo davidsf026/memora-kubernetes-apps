@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-phpipam
+  namespace: ns-phpipam
+spec:
+  rules:
+  - host: phpipam.teste.apps.memora.com.br
+    http:
+      paths:
+      - backend:
+          service:
+            name: svc-phpipam
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
