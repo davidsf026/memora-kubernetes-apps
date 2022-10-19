@@ -5,7 +5,7 @@ metadata:
   namespace: ns-phpipam
 spec:
   rules:
-  - host: phpipam.teste.apps.memora.com.br
+  - host: teste.teste.apps.memora.com.br
     http:
       paths:
       - backend:
