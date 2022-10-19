@@ -1,0 +1,34 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: pipeline-teste
+spec:
+  tasks:
+  - name: clonando-o-repo
+    taskRef:
+      name: clonando-o-repo
+      kind: Task
+  - name: buildando-a-aplicacao
+    taskRef:
+      name: buildando-a-aplicacao
+      kind: Task
+    runAfter:
+    - clonando-o-repo
+  - name: criando-imagem
+    taskRef:
+      name: criando-imagem
+      kind: Task
+    runAfter:
+    - buildando-a-aplicacao
+  - name: enviando-imagem
+    taskRef:
+      name: enviando-imagem
+      kind: Task
+    runAfter:
+    - criando-imagem
+  - name: fazendo-deploy-da-nova-versao
+    taskRef:
+      name: fazendo-deploy-da-nova-versao
+      kind: Task
+    runAfter:
+    - enviando-imagem

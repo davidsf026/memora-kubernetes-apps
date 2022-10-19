@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: criando-imagem
+spec:
+  steps:
+  - name: criando-imagem
+    image: alpine/git:v2.26.2
+    script: |
+      #!/usr/bin/env sh
+      echo "Finja que estou criando a imagem aqui :D"
+      echo "Opa, está criada!"

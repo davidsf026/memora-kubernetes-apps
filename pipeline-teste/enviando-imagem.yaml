@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: enviando-imagem
+spec:
+  steps:
+  - name: enviando-imagem
+    image: alpine/git:v2.26.2
+    script: |
+      #!/usr/bin/env sh
+      echo "Finja que estou enviando a imagem aqui :D"
+      echo "Opa, está enviado!"

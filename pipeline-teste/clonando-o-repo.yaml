@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: clonando-o-repo
+spec:
+  steps:
+  - name: clonando
+    image: alpine/git:v2.26.2
+    script: |
+      #!/usr/bin/env sh
+      echo "Finja que estou clonando um repo aqui :D"
+      echo "Opa, está clonado!"
