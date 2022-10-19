@@ -6,7 +6,6 @@ metadata:
 spec:
   ports:
   - name: port-mysql-phpipam
-    nodePort: 30002
     port: 3306
     protocol: TCP
     targetPort: 3306
