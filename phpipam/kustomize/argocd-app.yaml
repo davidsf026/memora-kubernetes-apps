@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: phpipam
+spec:
+  destination:
+    name: ''
+    namespace: ns-phpipam
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: phpipam/kustomize
+    repoURL: 'https://github.com/davidsf026/memora-kubernetes-apps'
+    targetRevision: HEAD
+  project: memora-infra-apps
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
