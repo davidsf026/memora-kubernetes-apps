@@ -10,4 +10,3 @@ spec:
     requests:
       storage: 1Gi
   volumeMode: Filesystem
-  volumeName: pvc-8ae4aa9e-9e31-43c5-9e14-8c7e4d1aab1a
