@@ -1,0 +1,7 @@
+resources:
+  - buildando-a-aplicacao.yaml
+  - clonando-o-repo.yaml
+  - criando-imagem.yaml
+  - enviando-imagem.yaml
+  - fazendo-deploy-da-nova-versao.yaml
+  - pipeline-teste.yaml
