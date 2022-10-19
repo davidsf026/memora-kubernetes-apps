@@ -1,0 +1,7 @@
+resources:
+  - deployment-mysql-phpipam.yaml
+  - deployment-phpipam.yaml
+  - ingress-phpipam.yaml
+  - pvc-mysql-phpipam.yaml
+  - svc-mysql-phpipam.yaml
+  - svc-phpipam.yaml
